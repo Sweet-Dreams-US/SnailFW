@@ -38,7 +38,7 @@ website/
 │   │   ├── cart.js          # localStorage cart + drawer + toast
 │   │   └── main.js          # active nav, marquee duplicator, reveal observer, scrollspy
 │   └── img/
-│       ├── snail-mark.png       # hand-drawn snail mascot (logo)
+│       ├── snail-logo.png       # AI-generated olive silhouette mascot
 │       ├── snail-wordmark.png   # "snail" bubble wordmark
 │       ├── snail-bubble.jpg     # alt bubble logo (lilac)
 │       ├── matcha.webp          # AI-generated · iced matcha
