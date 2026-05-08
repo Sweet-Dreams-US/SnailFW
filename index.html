@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#F0E5C8">
+  <title>snail — cozy café in west central, fort wayne</title>
+  <meta name="description" content="A cozy local café in West Central, Fort Wayne. Slow coffee, warm donuts, hand-pulled espresso. 725 Union St · open daily from May 11.">
+  <link rel="icon" href="assets/img/snail-mark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Caveat:wght@400;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<header class="nav" role="banner">
+  <div class="wrap nav__row">
+    <a class="nav__brand" href="index.html" aria-label="Snail home">
+      <img src="assets/img/snail-mark.png" alt="">
+      <span class="nav__brand-text">snail</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="menu.html">Menu</a>
+      <a class="nav__link" href="story.html">Story</a>
+      <a class="nav__link" href="visit.html">Visit</a>
+    </nav>
+    <button class="nav__cart" data-cart-open aria-label="Open bag">
+      <span>bag</span>
+      <span class="nav__cart-count" data-cart-count style="display:none">0</span>
+    </button>
+  </div>
+</header>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="wrap hero__inner">
+    <div class="hero__copy">
+      <span class="hero__eyebrow" data-reveal>now open · west central · fort wayne</span>
+      <h1 class="hero__title" data-reveal data-reveal-delay="1">
+        slow coffee.
+        <em>warm donuts.</em>
+        cozy corner.
+      </h1>
+      <p class="hero__lede" data-reveal data-reveal-delay="2">
+        A tiny café tucked at <strong>725 Union St</strong> — single-origin pours, cardamom lattes,
+        and donuts still warm from the oven. Order ahead, swing by, slow down.
+      </p>
+      <div class="hero__ctas" data-reveal data-reveal-delay="3">
+        <a class="btn btn--brick" href="menu.html">see the menu →</a>
+        <a class="btn btn--ghost" href="visit.html">find us</a>
+      </div>
+    </div>
+    <div class="hero__art">
+      <div class="hero__art-blob"></div>
+      <div class="hero__art-blob matcha"></div>
+      <img class="hero__art-snail" src="assets/img/snail-mark.png" alt="A hand-drawn snail with hearts on its antennae">
+      <span class="hero__art-tag t1">opens may 11 🌸</span>
+      <span class="hero__art-tag t2">pickup ready in 10 min</span>
+      <span class="hero__art-tag t3">slow bar w/ nick</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== MARQUEE ========== -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>cardamom latte</span>
+    <span>doubleshot espresso</span>
+    <span>slow bar pour-over</span>
+    <span>warm donuts</span>
+    <span>cinnamon bun</span>
+    <span>apple fritter</span>
+    <span>cozy corner</span>
+    <span>west central</span>
+  </div>
+</div>
+
+<!-- ========== STORY ========== -->
+<section class="story">
+  <div class="wrap story__inner">
+    <div class="story__copy" data-reveal>
+      <span class="eyebrow">our little story</span>
+      <h2>a cozy corner<br>that takes its<br><span style="color:var(--brick);font-family:var(--font-hand);">time.</span></h2>
+      <p>
+        Snail started with a stubborn idea: that good coffee is worth waiting for, and waiting is worth doing
+        on a soft chair next to a window. We're a small neighborhood spot in the heart of <strong>West Central</strong>,
+        slinging single-origin pour-overs, espresso, and donuts baked the same morning.
+      </p>
+      <p>
+        No app upsells. No twelve-step ordering. Just a little menu, a slow rhythm, and a snail that
+        thinks you're doing great.
+      </p>
+      <a class="btn btn--matcha" href="story.html">read our story</a>
+    </div>
+    <div class="story__photos" data-reveal data-reveal-delay="2">
+      <figure class="polaroid polaroid--tilt-l">
+        <img src="assets/img/matcha.webp" alt="An iced matcha latte in a clear cup with a snail logo sticker, on a sunlit wooden table">
+        <figcaption>matcha o'clock</figcaption>
+      </figure>
+      <figure class="polaroid polaroid--tilt-r">
+        <img src="assets/img/snail-cup.webp" alt="A snail-stamped paper coffee cup on an olive ledge against a brick wall">
+        <figcaption>to-go love ♡</figcaption>
+      </figure>
+      <figure class="polaroid polaroid--tilt-c">
+        <img src="assets/img/donuts.webp" alt="A plate of cake donuts, an apple fritter, and a cinnamon bun with scattered cardamom pods">
+        <figcaption>warm from the oven</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ========== HIGHLIGHTS ========== -->
+<section class="highlights">
+  <div class="wrap">
+    <div class="highlights__head">
+      <span class="hand">what's brewing</span>
+      <h2>three things we do well</h2>
+    </div>
+    <div class="highlights__row">
+      <article class="highlight" data-reveal>
+        <div class="highlight__icon">🍵</div>
+        <h3>cardamom latte</h3>
+        <p>cardamom + vanilla bean paste + espresso. our signature.</p>
+      </article>
+      <article class="highlight" data-reveal data-reveal-delay="1">
+        <div class="highlight__icon">☕️</div>
+        <h3>slow bar w/ nick</h3>
+        <p>a hand-pulled pour-over of single-origin ethiopian or kenyan beans.</p>
+      </article>
+      <article class="highlight" data-reveal data-reveal-delay="2">
+        <div class="highlight__icon">🍩</div>
+        <h3>warm donuts</h3>
+        <p>pumpkin cake, chocolate cake, sour cream, fritters & cinnamon buns.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== MENU PREVIEW (add-to-bag from home) ========== -->
+<section class="menu-preview wrap">
+  <div class="menu-preview__head">
+    <div>
+      <span class="hand">today's little menu →</span>
+      <h2>add it to the bag.</h2>
+    </div>
+    <a class="btn btn--ghost btn--small" href="menu.html">see full menu</a>
+  </div>
+
+  <div class="menu-preview__grid" data-reveal>
+
+    <article class="item-card">
+      <span class="item-card__sticker">signature ✿</span>
+      <h3 class="item-card__name">cardamom latte</h3>
+      <p class="item-card__desc">cardamom · vanilla bean paste · espresso</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$8</span>
+        <button class="item-card__add"
+          data-add
+          data-id="cardamom-latte"
+          data-name="cardamom latte"
+          data-price="8"
+          data-sub="cardamom · vanilla bean"
+          data-emoji="🍵">
+          <span>add to bag</span>
+        </button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">espresso</h3>
+      <p class="item-card__desc">a clean, bright doubleshot</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$4</span>
+        <button class="item-card__add"
+          data-add
+          data-id="espresso"
+          data-name="espresso"
+          data-price="4"
+          data-sub="doubleshot"
+          data-emoji="☕">
+          <span>add to bag</span>
+        </button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <span class="item-card__sticker">slow bar ☼</span>
+      <h3 class="item-card__name">slow bar w/ nick</h3>
+      <p class="item-card__desc">single-origin ethiopian or kenyan, hand-poured</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$9</span>
+        <button class="item-card__add"
+          data-add
+          data-id="slow-bar"
+          data-name="slow bar w/ nick"
+          data-price="9"
+          data-sub="single-origin pour"
+          data-emoji="☕">
+          <span>add to bag</span>
+        </button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">cinnamon bun</h3>
+      <p class="item-card__desc">soft, swirly, glazed in the morning</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$3</span>
+        <button class="item-card__add"
+          data-add
+          data-id="cinnamon-bun"
+          data-name="cinnamon bun"
+          data-price="3"
+          data-sub="warm & glazed"
+          data-emoji="🍥">
+          <span>add to bag</span>
+        </button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">apple fritter</h3>
+      <p class="item-card__desc">crispy edges, soft inside, real apples</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$4</span>
+        <button class="item-card__add"
+          data-add
+          data-id="apple-fritter"
+          data-name="apple fritter"
+          data-price="4"
+          data-sub="real apples inside"
+          data-emoji="🍎">
+          <span>add to bag</span>
+        </button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">cake donut</h3>
+      <p class="item-card__desc">pumpkin · chocolate · sour cream</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$2</span>
+        <button class="item-card__add"
+          data-add
+          data-id="cake-donut"
+          data-name="cake donut"
+          data-price="2"
+          data-sub="pumpkin · chocolate · sour cream"
+          data-emoji="🍩">
+          <span>add to bag</span>
+        </button>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ========== VISIT TEASER ========== -->
+<section class="wrap">
+  <div class="visit-teaser" data-reveal>
+    <div class="visit-teaser__art">
+      <img src="assets/img/snail-cup.webp" alt="A snail-stamped paper coffee cup against a brick wall">
+    </div>
+    <div class="visit-teaser__copy">
+      <span class="eyebrow">come say hi</span>
+      <h2>725 Union St,<br>Fort Wayne, IN</h2>
+      <p>Tucked in West Central. Two blocks from the West Main mural, a short walk from the library.</p>
+      <p class="visit-teaser__hours">
+        regular hours start <strong>May 11th</strong> 🌸<br>
+        mon — sat · 7a — 3p<br>
+        sun · 8a — 2p
+      </p>
+      <a class="btn btn--brick" href="visit.html" style="margin-top:.8rem">get directions</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="footer__grid">
+    <div class="footer__brand">
+      <img src="assets/img/snail-wordmark.png" alt="snail">
+      <p style="margin-top:.6rem;color:var(--lilac);font-family:var(--font-hand);font-size:1.2rem">
+        cozy corner · west central
+      </p>
+    </div>
+    <div>
+      <h4 class="footer__title">visit</h4>
+      <div class="footer__list">
+        <a>725 Union St</a>
+        <a>Fort Wayne, IN</a>
+        <a href="visit.html">hours & directions</a>
+      </div>
+    </div>
+    <div>
+      <h4 class="footer__title">menu</h4>
+      <div class="footer__list">
+        <a href="menu.html#coffee">coffee</a>
+        <a href="menu.html#donuts">donuts</a>
+        <a href="menu.html#extras">extras</a>
+      </div>
+    </div>
+    <div>
+      <h4 class="footer__title">say hi</h4>
+      <div class="footer__list">
+        <a href="https://instagram.com/snail.fw" target="_blank" rel="noopener">@snail.fw</a>
+        <a href="story.html">our story</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">© 2026 snail · made with love & a little patience 🐌</div>
+</footer>
+
+<!-- ========== CART DRAWER ========== -->
+<aside class="cart-drawer" data-cart-drawer aria-hidden="true">
+  <div class="cart-drawer__scrim"></div>
+  <div class="cart-drawer__panel">
+    <div class="cart-drawer__header">
+      <h2 class="cart-drawer__title">your bag 🐌</h2>
+      <button class="cart-drawer__close" data-cart-close aria-label="Close bag">×</button>
+    </div>
+
+    <div class="cart-list" data-cart-list></div>
+
+    <div class="cart-empty" data-cart-empty>
+      <img src="assets/img/snail-mark.png" alt="">
+      <p>nothing in the bag yet — go pick something cozy</p>
+      <a class="btn btn--matcha btn--small" href="menu.html" style="margin-top:1rem">browse menu</a>
+    </div>
+
+    <div class="cart-foot">
+      <div class="cart-total">
+        <span>total <small>(pickup)</small></span>
+        <span data-cart-total>$0.00</span>
+      </div>
+      <button class="btn btn--brick cart-checkout" data-cart-checkout>
+        place pickup order →
+      </button>
+      <p style="text-align:center;margin-top:.7rem;font-family:var(--font-hand);color:var(--olive);font-size:1.05rem">
+        order online, pick up at 725 union
+      </p>
+    </div>
+  </div>
+</aside>
+
+<!-- Toast -->
+<div class="toast" data-toast role="status" aria-live="polite"></div>
+
+<script src="assets/js/cart.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

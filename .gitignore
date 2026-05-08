@@ -1,0 +1,26 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+.history/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Playwright
+.playwright-mcp/
+playwright-report/
+test-results/
+
+# Local server artifacts
+__pycache__/
+
+# Local Higgsfield raw assets (large, regenerate from prompts if needed)
+assets/img/*.raw.png

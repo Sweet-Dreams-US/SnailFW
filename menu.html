@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#F0E5C8">
+  <title>menu — snail · cozy café in west central, fort wayne</title>
+  <meta name="description" content="The full snail menu: cardamom latte, doubleshot espresso, single-origin slow bar, donuts, fritters, cinnamon buns, and more. Order ahead for pickup.">
+  <link rel="icon" href="assets/img/snail-mark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Caveat:wght@400;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<header class="nav" role="banner">
+  <div class="wrap nav__row">
+    <a class="nav__brand" href="index.html" aria-label="Snail home">
+      <img src="assets/img/snail-mark.png" alt="">
+      <span class="nav__brand-text">snail</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="menu.html">Menu</a>
+      <a class="nav__link" href="story.html">Story</a>
+      <a class="nav__link" href="visit.html">Visit</a>
+    </nav>
+    <button class="nav__cart" data-cart-open aria-label="Open bag">
+      <span>bag</span>
+      <span class="nav__cart-count" data-cart-count style="display:none">0</span>
+    </button>
+  </div>
+</header>
+
+<!-- ========== MENU HERO ========== -->
+<section class="menu-hero wrap-narrow">
+  <span class="eyebrow">a tiny menu, on purpose</span>
+  <h1>the menu</h1>
+  <p>tap any item to drop it in your bag — pickup at 725 union, fresh & ready.</p>
+</section>
+
+<!-- ========== MENU TABS ========== -->
+<div class="wrap">
+  <div class="menu-tabs">
+    <button class="menu-tab is-active" data-menu-tab="coffee">coffee</button>
+    <button class="menu-tab" data-menu-tab="signature">signature</button>
+    <button class="menu-tab" data-menu-tab="donuts">donuts</button>
+    <button class="menu-tab" data-menu-tab="extras">extras</button>
+  </div>
+</div>
+
+<!-- ========== COFFEE ========== -->
+<section class="menu-section wrap" id="coffee">
+  <h2 class="menu-section__title">coffee</h2>
+  <p class="menu-section__sub">pulled, poured, and patient</p>
+
+  <div class="menu-grid">
+
+    <article class="item-card">
+      <h3 class="item-card__name">espresso</h3>
+      <p class="item-card__desc">a clean doubleshot — bright, balanced, classic</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$4</span>
+        <button class="item-card__add" data-add data-id="espresso" data-name="espresso" data-price="4" data-sub="doubleshot" data-emoji="☕"><span>add to bag</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">americano</h3>
+      <p class="item-card__desc">espresso + hot water, long & smooth</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$4.5</span>
+        <button class="item-card__add" data-add data-id="americano" data-name="americano" data-price="4.5" data-sub="espresso + water" data-emoji="☕"><span>add to bag</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">cortado</h3>
+      <p class="item-card__desc">equal parts espresso + warm milk</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$5</span>
+        <button class="item-card__add" data-add data-id="cortado" data-name="cortado" data-price="5" data-sub="4oz · 1:1" data-emoji="☕"><span>add to bag</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">cappuccino</h3>
+      <p class="item-card__desc">espresso, steamed milk, soft foam</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$5.5</span>
+        <button class="item-card__add" data-add data-id="cappuccino" data-name="cappuccino" data-price="5.5" data-sub="6oz · classic" data-emoji="☕"><span>add to bag</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">latte</h3>
+      <p class="item-card__desc">espresso + steamed milk, lots of love</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$6</span>
+        <button class="item-card__add" data-add data-id="latte" data-name="latte" data-price="6" data-sub="12oz" data-emoji="🥛"><span>add to bag</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">drip</h3>
+      <p class="item-card__desc">today's house drip, refills if you stick around</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$3.5</span>
+        <button class="item-card__add" data-add data-id="drip" data-name="drip" data-price="3.5" data-sub="house" data-emoji="☕"><span>add to bag</span></button>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- squiggle -->
+<div class="wrap">
+  <div class="squiggle" aria-hidden="true">
+    <svg viewBox="0 0 1200 28" preserveAspectRatio="none">
+      <path d="M0 14 Q60 0 120 14 T240 14 T360 14 T480 14 T600 14 T720 14 T840 14 T960 14 T1080 14 T1200 14"
+            fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+  </div>
+</div>
+
+<!-- ========== SIGNATURE ========== -->
+<section class="menu-section wrap" id="signature">
+  <h2 class="menu-section__title">signature</h2>
+  <p class="menu-section__sub">our little flexes — try one new today</p>
+
+  <div class="menu-grid">
+
+    <article class="item-card">
+      <span class="item-card__sticker">our pride ✿</span>
+      <h3 class="item-card__name">cardamom latte</h3>
+      <p class="item-card__desc">cardamom · vanilla bean paste · espresso</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$8</span>
+        <button class="item-card__add" data-add data-id="cardamom-latte" data-name="cardamom latte" data-price="8" data-sub="cardamom · vanilla bean" data-emoji="🍵"><span>add to bag</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <span class="item-card__sticker">slow bar ☼</span>
+      <h3 class="item-card__name">slow bar w/ nick</h3>
+      <p class="item-card__desc">single-origin ethiopian or kenyan, hand-poured at the bar</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$9</span>
+        <button class="item-card__add" data-add data-id="slow-bar" data-name="slow bar w/ nick" data-price="9" data-sub="single-origin pour" data-emoji="☕"><span>add to bag</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">iced matcha</h3>
+      <p class="item-card__desc">ceremonial-grade matcha, oat milk, lightly sweet</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$7</span>
+        <button class="item-card__add" data-add data-id="iced-matcha" data-name="iced matcha" data-price="7" data-sub="oat · lightly sweet" data-emoji="🍵"><span>add to bag</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">honey lavender latte</h3>
+      <p class="item-card__desc">local honey + lavender + espresso</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$7.5</span>
+        <button class="item-card__add" data-add data-id="honey-lavender" data-name="honey lavender latte" data-price="7.5" data-sub="honey · lavender" data-emoji="💜"><span>add to bag</span></button>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="squiggle" aria-hidden="true">
+    <svg viewBox="0 0 1200 28" preserveAspectRatio="none">
+      <path d="M0 14 Q60 0 120 14 T240 14 T360 14 T480 14 T600 14 T720 14 T840 14 T960 14 T1080 14 T1200 14"
+            fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+  </div>
+</div>
+
+<!-- ========== DONUTS ========== -->
+<section class="menu-section wrap" id="donuts">
+  <h2 class="menu-section__title">donuts</h2>
+  <p class="menu-section__sub">baked the morning of, gone by lunch</p>
+
+  <div class="menu-grid">
+
+    <article class="item-card">
+      <h3 class="item-card__name">pumpkin cake</h3>
+      <p class="item-card__desc">spiced cake donut with maple glaze</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$2</span>
+        <button class="item-card__add" data-add data-id="pumpkin-cake" data-name="pumpkin cake donut" data-price="2" data-sub="maple glaze" data-emoji="🎃"><span>add to bag</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">chocolate cake</h3>
+      <p class="item-card__desc">double chocolate, glazed dark</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$2</span>
+        <button class="item-card__add" data-add data-id="chocolate-cake" data-name="chocolate cake donut" data-price="2" data-sub="dark glaze" data-emoji="🍫"><span>add to bag</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">sour cream</h3>
+      <p class="item-card__desc">tangy, tender, with a sugar shell</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$2</span>
+        <button class="item-card__add" data-add data-id="sour-cream" data-name="sour cream donut" data-price="2" data-sub="sugar shell" data-emoji="🍩"><span>add to bag</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <span class="item-card__sticker">favorite ♡</span>
+      <h3 class="item-card__name">apple fritter</h3>
+      <p class="item-card__desc">crispy edges, soft inside, real apples</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$4</span>
+        <button class="item-card__add" data-add data-id="apple-fritter" data-name="apple fritter" data-price="4" data-sub="real apples inside" data-emoji="🍎"><span>add to bag</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">cinnamon bun</h3>
+      <p class="item-card__desc">soft, swirly, glazed in the morning</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$3</span>
+        <button class="item-card__add" data-add data-id="cinnamon-bun" data-name="cinnamon bun" data-price="3" data-sub="warm & glazed" data-emoji="🍥"><span>add to bag</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">box of 4</h3>
+      <p class="item-card__desc">mix & match cake donuts — leave a note at pickup</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$7</span>
+        <button class="item-card__add" data-add data-id="donut-box-4" data-name="box of 4 donuts" data-price="7" data-sub="mix & match" data-emoji="📦"><span>add to bag</span></button>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="squiggle" aria-hidden="true">
+    <svg viewBox="0 0 1200 28" preserveAspectRatio="none">
+      <path d="M0 14 Q60 0 120 14 T240 14 T360 14 T480 14 T600 14 T720 14 T840 14 T960 14 T1080 14 T1200 14"
+            fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+  </div>
+</div>
+
+<!-- ========== EXTRAS ========== -->
+<section class="menu-section wrap" id="extras">
+  <h2 class="menu-section__title">extras</h2>
+  <p class="menu-section__sub">a little something extra — milks, syrups, the works</p>
+
+  <div class="menu-grid">
+
+    <article class="item-card">
+      <h3 class="item-card__name">oat milk</h3>
+      <p class="item-card__desc">creamy, neutral, our default plant milk</p>
+      <div class="item-card__row">
+        <span class="item-card__price">+$.75</span>
+        <button class="item-card__add" data-add data-id="oat-milk" data-name="oat milk" data-price="0.75" data-sub="add-on" data-emoji="🥛"><span>add to bag</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">extra shot</h3>
+      <p class="item-card__desc">because monday</p>
+      <div class="item-card__row">
+        <span class="item-card__price">+$1</span>
+        <button class="item-card__add" data-add data-id="extra-shot" data-name="extra shot" data-price="1" data-sub="add-on" data-emoji="⚡"><span>add to bag</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">vanilla syrup</h3>
+      <p class="item-card__desc">house-made, real vanilla bean</p>
+      <div class="item-card__row">
+        <span class="item-card__price">+$.50</span>
+        <button class="item-card__add" data-add data-id="vanilla-syrup" data-name="vanilla syrup" data-price="0.5" data-sub="add-on" data-emoji="✨"><span>add to bag</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">snail tote</h3>
+      <p class="item-card__desc">canvas tote, snail print, sturdy enough for groceries</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$18</span>
+        <button class="item-card__add" data-add data-id="snail-tote" data-name="snail tote bag" data-price="18" data-sub="merch · canvas" data-emoji="👜"><span>add to bag</span></button>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="footer__grid">
+    <div class="footer__brand">
+      <img src="assets/img/snail-wordmark.png" alt="snail">
+      <p style="margin-top:.6rem;color:var(--lilac);font-family:var(--font-hand);font-size:1.2rem">cozy corner · west central</p>
+    </div>
+    <div>
+      <h4 class="footer__title">visit</h4>
+      <div class="footer__list">
+        <a>725 Union St</a>
+        <a>Fort Wayne, IN</a>
+        <a href="visit.html">hours & directions</a>
+      </div>
+    </div>
+    <div>
+      <h4 class="footer__title">menu</h4>
+      <div class="footer__list">
+        <a href="menu.html#coffee">coffee</a>
+        <a href="menu.html#donuts">donuts</a>
+        <a href="menu.html#extras">extras</a>
+      </div>
+    </div>
+    <div>
+      <h4 class="footer__title">say hi</h4>
+      <div class="footer__list">
+        <a href="https://instagram.com/snail.fw" target="_blank" rel="noopener">@snail.fw</a>
+        <a href="story.html">our story</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">© 2026 snail · made with love & a little patience 🐌</div>
+</footer>
+
+<!-- ========== CART DRAWER ========== -->
+<aside class="cart-drawer" data-cart-drawer aria-hidden="true">
+  <div class="cart-drawer__scrim"></div>
+  <div class="cart-drawer__panel">
+    <div class="cart-drawer__header">
+      <h2 class="cart-drawer__title">your bag 🐌</h2>
+      <button class="cart-drawer__close" data-cart-close aria-label="Close bag">×</button>
+    </div>
+    <div class="cart-list" data-cart-list></div>
+    <div class="cart-empty" data-cart-empty>
+      <img src="assets/img/snail-mark.png" alt="">
+      <p>nothing in the bag yet — go pick something cozy</p>
+      <a class="btn btn--matcha btn--small" href="menu.html" style="margin-top:1rem">browse menu</a>
+    </div>
+    <div class="cart-foot">
+      <div class="cart-total">
+        <span>total <small>(pickup)</small></span>
+        <span data-cart-total>$0.00</span>
+      </div>
+      <button class="btn btn--brick cart-checkout" data-cart-checkout>place pickup order →</button>
+      <p style="text-align:center;margin-top:.7rem;font-family:var(--font-hand);color:var(--olive);font-size:1.05rem">order online, pick up at 725 union</p>
+    </div>
+  </div>
+</aside>
+
+<div class="toast" data-toast role="status" aria-live="polite"></div>
+
+<script src="assets/js/cart.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
