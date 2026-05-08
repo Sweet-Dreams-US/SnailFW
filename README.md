@@ -110,4 +110,4 @@ git push origin main      # then enable Pages in repo settings, branch: main, fo
 
 ## License
 
-© 2026 snail — built for the snail team by Sweet Dreams Music LLC.
+© 2026 snail · west central · fort wayne 🐌
