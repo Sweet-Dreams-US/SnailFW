@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#F0E5C8">
   <title>visit — snail · 725 union st, fort wayne</title>
   <meta name="description" content="Find snail at 725 Union St in West Central, Fort Wayne. Hours, parking, directions, and how to order ahead for pickup.">
-  <link rel="icon" href="assets/img/snail-mark.png">
+  <link rel="icon" href="assets/img/snail-logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Caveat:wght@400;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700&display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@
 <header class="nav" role="banner">
   <div class="wrap nav__row">
     <a class="nav__brand" href="index.html" aria-label="Snail home">
-      <img src="assets/img/snail-mark.png" alt="">
+      <img src="assets/img/snail-logo.png" alt="">
       <span class="nav__brand-text">snail</span>
     </a>
     <nav class="nav__links" aria-label="Primary">
@@ -172,7 +172,7 @@
     </div>
     <div class="cart-list" data-cart-list></div>
     <div class="cart-empty" data-cart-empty>
-      <img src="assets/img/snail-mark.png" alt="">
+      <img src="assets/img/snail-logo.png" alt="">
       <p>nothing in the bag yet — go pick something cozy</p>
       <a class="btn btn--matcha btn--small" href="menu.html" style="margin-top:1rem">browse menu</a>
     </div>
@@ -187,8 +187,29 @@
   </div>
 </aside>
 
+<!-- Customize modal -->
+<div class="modal" data-modal hidden role="dialog" aria-modal="true" aria-labelledby="modal-title-v">
+  <div class="modal__scrim" data-modal-close></div>
+  <div class="modal__panel">
+    <header class="modal__header">
+      <h2 id="modal-title-v" data-modal-title>customize</h2>
+      <button class="modal__close" type="button" data-modal-close aria-label="Close">×</button>
+    </header>
+    <p class="modal__desc" data-modal-desc></p>
+    <div data-modal-groups></div>
+    <footer class="modal__footer">
+      <div class="modal__total"><span>total</span> <span data-modal-total>$0.00</span></div>
+      <div class="modal__buttons">
+        <button class="modal__remove" type="button" data-modal-remove style="display:none">remove from bag</button>
+        <button class="btn btn--brick modal__add" type="button" data-modal-confirm>add to bag</button>
+      </div>
+    </footer>
+  </div>
+</div>
+
 <div class="toast" data-toast role="status" aria-live="polite"></div>
 
+<script src="assets/js/customize.js"></script>
 <script src="assets/js/cart.js"></script>
 <script src="assets/js/main.js"></script>
 </body>

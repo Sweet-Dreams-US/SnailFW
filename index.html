@@ -20,7 +20,7 @@
 <header class="nav" role="banner">
   <div class="wrap nav__row">
     <a class="nav__brand" href="index.html" aria-label="Snail home">
-      <img src="assets/img/snail-mark.png" alt="">
+      <img src="assets/img/snail-logo.png" alt="">
       <span class="nav__brand-text">snail</span>
     </a>
     <nav class="nav__links" aria-label="Primary">
@@ -42,10 +42,10 @@
     <div class="hero__copy">
       <span class="hero__eyebrow" data-reveal>now open · west central · fort wayne</span>
       <h1 class="hero__title" data-reveal data-reveal-delay="1">
-        slow coffee.
-        <em>warm donuts.</em>
-        cozy corner.
+        <span>slow coffee.</span>
+        <span>cozy corner.</span>
       </h1>
+      <span class="hero__hand-tag" data-reveal data-reveal-delay="2">+ donuts still warm from the oven</span>
       <p class="hero__lede" data-reveal data-reveal-delay="2">
         A tiny café tucked at <strong>725 Union St</strong> — single-origin pours, cardamom lattes,
         and donuts still warm from the oven. Order ahead, swing by, slow down.
@@ -348,9 +348,30 @@
   </div>
 </aside>
 
+<!-- ========== CUSTOMIZE MODAL ========== -->
+<div class="modal" data-modal hidden role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal__scrim" data-modal-close></div>
+  <div class="modal__panel">
+    <header class="modal__header">
+      <h2 id="modal-title" data-modal-title>customize</h2>
+      <button class="modal__close" type="button" data-modal-close aria-label="Close">×</button>
+    </header>
+    <p class="modal__desc" data-modal-desc></p>
+    <div data-modal-groups></div>
+    <footer class="modal__footer">
+      <div class="modal__total"><span>total</span> <span data-modal-total>$0.00</span></div>
+      <div class="modal__buttons">
+        <button class="modal__remove" type="button" data-modal-remove style="display:none">remove from bag</button>
+        <button class="btn btn--brick modal__add" type="button" data-modal-confirm>add to bag</button>
+      </div>
+    </footer>
+  </div>
+</div>
+
 <!-- Toast -->
 <div class="toast" data-toast role="status" aria-live="polite"></div>
 
+<script src="assets/js/customize.js"></script>
 <script src="assets/js/cart.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
