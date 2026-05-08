@@ -133,8 +133,8 @@
 .marquee__track span::after {
   content: "";
   display: inline-block;
-  width: 32px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
   background-color: var(--paper);
   -webkit-mask: url('../img/snail-logo.png') no-repeat center / contain;
   mask: url('../img/snail-logo.png') no-repeat center / contain;
