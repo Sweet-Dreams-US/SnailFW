@@ -131,10 +131,22 @@
 }
 .marquee__track span { display: inline-flex; align-items: center; gap: 1.2rem; flex-shrink: 0; }
 .marquee__track span::after {
-  content: "🐌";
-  font-size: 1.4rem;
-  filter: grayscale(.4);
+  content: "";
+  display: inline-block;
+  width: 32px;
+  height: 26px;
+  background-color: var(--paper);
+  -webkit-mask: url('../img/snail-logo.png') no-repeat center / contain;
+  mask: url('../img/snail-logo.png') no-repeat center / contain;
+  flex-shrink: 0;
 }
+.marquee__track span:nth-child(7n+1)::after { background-color: var(--paper); }
+.marquee__track span:nth-child(7n+2)::after { background-color: var(--matcha); }
+.marquee__track span:nth-child(7n+3)::after { background-color: var(--lilac); }
+.marquee__track span:nth-child(7n+4)::after { background-color: var(--brick); }
+.marquee__track span:nth-child(7n+5)::after { background-color: var(--cream-3); }
+.marquee__track span:nth-child(7n+6)::after { background-color: var(--matcha-deep); }
+.marquee__track span:nth-child(7n+7)::after { background-color: var(--lilac-deep); }
 @keyframes marquee {
   from { transform: translateX(0); }
   to   { transform: translateX(-100%); }
