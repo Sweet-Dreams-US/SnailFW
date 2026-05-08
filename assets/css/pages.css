@@ -480,8 +480,8 @@
 
 /* ---------- RESPONSIVE BREAKPOINTS ---------- */
 @media (max-width: 900px) {
-  /* Mobile hero: snail floats top-right as sticker, copy goes full-width
-     so eyebrow + title + lede + CTAs all sit above the fold */
+  /* Mobile hero: text is full-width, the snail sits in the bottom-right
+     next to the CTAs so the buttons and the mascot share the action row */
   .hero { padding-top: 1.5rem; padding-bottom: 2rem; }
   .hero__inner {
     grid-template-columns: 1fr;
@@ -489,33 +489,44 @@
     gap: 0;
   }
   .hero__copy {
-    padding-right: 130px;          /* leave room for the corner snail */
-    min-height: 150px;
+    padding-right: 0;             /* TEXT FILLS FULL WIDTH */
   }
   .hero__title { font-size: clamp(2.4rem, 11vw, 3.4rem); line-height: .95; }
-  .hero__lede  { padding-right: 0; margin-top: 1rem; }
-  .hero__ctas  { margin-top: 1.2rem; }
+  .hero__lede  { margin-top: 1rem; }
+  .hero__ctas  {
+    margin-top: 1.2rem;
+    padding-right: 150px;          /* reserve right side for the snail */
+    min-height: 130px;
+    align-items: center;
+    align-content: center;
+  }
   .hero__art {
     position: absolute;
-    top: 0;
+    bottom: 0;
     right: -8px;
     width: 145px;
-    height: 145px;
+    height: 130px;
     margin: 0;
     padding: 0;
     pointer-events: none;
   }
   .hero__art-snail { max-width: 130px; width: 100%; }
-  .hero__art-blob { width: 88%; opacity: .55; top: 6%; left: 6%; }
-  .hero__art-blob.matcha { width: 70%; opacity: .45; top: 12%; right: 4%; }
+  .hero__art-blob       { width: 88%; opacity: .55; top: 6%;  left: 6%;  }
+  .hero__art-blob.matcha{ width: 70%; opacity: .45; top: 12%; right: 4%; }
   .hero__art-tag {
     font-size: .82rem;
     padding: .2rem .55rem;
     box-shadow: 0 3px 0 var(--olive-ink);
   }
-  .hero__art-tag.t1 { top: -8%;  right: 92%; left: auto; transform: rotate(-6deg); pointer-events: auto; }
+  .hero__art-tag.t1 {
+    top: -18px;
+    left: 6px;
+    right: auto;
+    transform: rotate(-6deg);
+    pointer-events: auto;
+  }
   .hero__art-tag.t2,
-  .hero__art-tag.t3 { display: none; } /* keep just the most important "open now" badge on mobile */
+  .hero__art-tag.t3 { display: none; }
   .story__inner { grid-template-columns: 1fr; gap: 2rem; }
   .story__photos { height: 460px; max-width: 460px; margin: 0 auto; }
   .highlights__row { grid-template-columns: 1fr; gap: 1.2rem; max-width: 360px; margin: 0 auto; }
