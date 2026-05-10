@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#3A311C">
+  <title>admin · snail</title>
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Snail café admin dashboard — orders, menu, analytics, accounting, events, staff.">
+  <link rel="icon" href="assets/img/snail-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Caveat:wght@400;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body class="admin-body">
+
+<div class="admin">
+
+  <!-- ========== SIDEBAR ========== -->
+  <aside class="admin__sidebar">
+    <a class="admin__brand" href="index.html">
+      <img src="assets/img/snail-nav.png" alt="">
+      <div>
+        <span class="admin__brand-text">snail</span>
+        <span class="admin__brand-tag">admin</span>
+      </div>
+    </a>
+
+    <nav class="admin__nav" aria-label="Admin">
+      <button data-tab="orders">
+        <span class="admin__nav-icon">🛎</span>
+        <span>orders</span>
+        <span class="admin__nav-count" data-nav-count="orders"></span>
+      </button>
+      <button data-tab="menu">
+        <span class="admin__nav-icon">📋</span>
+        <span>menu</span>
+      </button>
+      <button data-tab="analytics">
+        <span class="admin__nav-icon">📈</span>
+        <span>analytics</span>
+      </button>
+      <button data-tab="accounting">
+        <span class="admin__nav-icon">💰</span>
+        <span>accounting</span>
+      </button>
+      <button data-tab="events">
+        <span class="admin__nav-icon">🌸</span>
+        <span>events</span>
+      </button>
+      <button data-tab="staff">
+        <span class="admin__nav-icon">🐌</span>
+        <span>staff</span>
+      </button>
+      <button data-tab="settings">
+        <span class="admin__nav-icon">⚙</span>
+        <span>settings</span>
+      </button>
+    </nav>
+
+    <div class="admin__sidebar-foot">
+      <div class="admin__user">
+        <div class="admin__user-avatar">A</div>
+        <div>
+          <div class="admin__user-name">aria k.</div>
+          <div class="admin__user-role">lead barista</div>
+        </div>
+      </div>
+      <button data-reset
+              style="margin-top:.6rem;width:100%;font-family:var(--font-hand);font-size:1rem;color:var(--lilac);padding:.4rem;background:transparent;border:1.5px dashed rgba(240,229,200,.2);border-radius:8px;cursor:pointer">
+        reset demo data
+      </button>
+      <a href="index.html"
+         style="display:block;margin-top:.4rem;text-align:center;font-family:var(--font-hand);font-size:1rem;color:var(--cream);opacity:.7">
+        ← back to site
+      </a>
+    </div>
+  </aside>
+
+  <!-- ========== MAIN ========== -->
+  <main class="admin__main">
+
+    <header class="admin__topbar">
+      <div>
+        <h1 data-page-title>orders today</h1>
+        <span class="hand" data-page-sub>live pickup queue · refresh as they come in</span>
+      </div>
+      <div class="admin__topbar-actions">
+        <button class="btn btn--ghost btn--small" onclick="window.SnailAdmin.renderAll()">refresh</button>
+        <button class="btn btn--brick btn--small" onclick="alert('demo only — would print receipts in production')">print queue</button>
+      </div>
+    </header>
+
+    <!-- ===== ORDERS TAB ===== -->
+    <section class="admin__tab" data-tab="orders">
+      <div data-stat-row class="stat-row"></div>
+
+      <div class="card">
+        <div class="card__head">
+          <div>
+            <span class="hand">live pickup queue</span>
+            <h2>orders</h2>
+          </div>
+          <div class="card__head-tools orders-filter">
+            <button class="chip is-active" data-filter="all">all</button>
+            <button class="chip" data-filter="pending">pending</button>
+            <button class="chip" data-filter="ready">ready</button>
+            <button class="chip" data-filter="done">picked up</button>
+          </div>
+        </div>
+        <div class="orders-grid" data-orders></div>
+      </div>
+    </section>
+
+    <!-- ===== MENU TAB ===== -->
+    <section class="admin__tab" data-tab="menu">
+      <div class="card">
+        <div class="card__head">
+          <div>
+            <span class="hand">edit anything · auto-saves</span>
+            <h2>menu items</h2>
+          </div>
+          <div class="card__head-tools">
+            <button class="chip">+ new item</button>
+          </div>
+        </div>
+        <div class="menu-editor" data-menu-edit></div>
+      </div>
+    </section>
+
+    <!-- ===== ANALYTICS TAB ===== -->
+    <section class="admin__tab" data-tab="analytics">
+      <div data-stat-row class="stat-row"></div>
+
+      <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:1.2rem;align-items:start">
+        <div class="card">
+          <div class="card__head">
+            <div>
+              <span class="hand">revenue · last 7 days</span>
+              <h2>$7,195 this week</h2>
+            </div>
+          </div>
+          <div class="chart-bar" data-chart-rev></div>
+        </div>
+
+        <div class="card">
+          <div class="card__head">
+            <div>
+              <span class="hand">top sellers</span>
+              <h2>this week</h2>
+            </div>
+          </div>
+          <div class="top-list" data-top-list></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__head">
+          <div>
+            <span class="hand">where orders come from</span>
+            <h2>traffic sources</h2>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem">
+          <div style="text-align:center;padding:1rem;background:var(--cream);border:1.5px solid var(--olive);border-radius:12px">
+            <div style="font-family:var(--font-hand);color:var(--brick);font-size:1rem">walk-in</div>
+            <div style="font-family:var(--font-display);font-size:1.6rem;color:var(--olive-ink)">68%</div>
+          </div>
+          <div style="text-align:center;padding:1rem;background:var(--cream);border:1.5px solid var(--olive);border-radius:12px">
+            <div style="font-family:var(--font-hand);color:var(--brick);font-size:1rem">website</div>
+            <div style="font-family:var(--font-display);font-size:1.6rem;color:var(--olive-ink)">22%</div>
+          </div>
+          <div style="text-align:center;padding:1rem;background:var(--cream);border:1.5px solid var(--olive);border-radius:12px">
+            <div style="font-family:var(--font-hand);color:var(--brick);font-size:1rem">instagram</div>
+            <div style="font-family:var(--font-display);font-size:1.6rem;color:var(--olive-ink)">8%</div>
+          </div>
+          <div style="text-align:center;padding:1rem;background:var(--cream);border:1.5px solid var(--olive);border-radius:12px">
+            <div style="font-family:var(--font-hand);color:var(--brick);font-size:1rem">word of mouth</div>
+            <div style="font-family:var(--font-display);font-size:1.6rem;color:var(--olive-ink)">2%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ACCOUNTING TAB ===== -->
+    <section class="admin__tab" data-tab="accounting">
+      <div class="card">
+        <div class="card__head">
+          <div>
+            <span class="hand">profit by category · this week</span>
+            <h2>P&L breakdown</h2>
+          </div>
+          <div class="card__head-tools">
+            <button class="chip is-active">week</button>
+            <button class="chip">month</button>
+            <button class="chip">YTD</button>
+          </div>
+        </div>
+        <table class="acct-table">
+          <thead>
+            <tr>
+              <th>category</th>
+              <th style="text-align:right">revenue</th>
+              <th style="text-align:right">cost of goods</th>
+              <th style="text-align:right">profit</th>
+              <th style="text-align:right">margin</th>
+            </tr>
+          </thead>
+          <tbody data-acct-rows></tbody>
+        </table>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem">
+        <div class="card">
+          <span class="hand" style="color:var(--brick);font-size:1.05rem">est. monthly</span>
+          <h3 style="font-family:var(--font-display);color:var(--olive-ink);font-size:1.6rem;margin-top:.2rem">$28,800 rev</h3>
+          <p style="color:var(--olive);font-size:.95rem;margin-top:.4rem">based on 4-week avg</p>
+        </div>
+        <div class="card">
+          <span class="hand" style="color:var(--brick);font-size:1.05rem">labor cost</span>
+          <h3 style="font-family:var(--font-display);color:var(--olive-ink);font-size:1.6rem;margin-top:.2rem">$7,200 / mo</h3>
+          <p style="color:var(--olive);font-size:.95rem;margin-top:.4rem">25% of revenue</p>
+        </div>
+        <div class="card">
+          <span class="hand" style="color:var(--brick);font-size:1.05rem">est. tax owed (Q2)</span>
+          <h3 style="font-family:var(--font-display);color:var(--olive-ink);font-size:1.6rem;margin-top:.2rem">$1,485</h3>
+          <p style="color:var(--olive);font-size:.95rem;margin-top:.4rem">7% IN sales tax · accrued</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EVENTS TAB ===== -->
+    <section class="admin__tab" data-tab="events">
+      <div class="card">
+        <div class="card__head">
+          <div>
+            <span class="hand">what's coming up</span>
+            <h2>upcoming events</h2>
+          </div>
+          <div class="card__head-tools">
+            <button class="chip">+ new event</button>
+          </div>
+        </div>
+        <div class="event-list" data-events-list></div>
+      </div>
+    </section>
+
+    <!-- ===== STAFF TAB ===== -->
+    <section class="admin__tab" data-tab="staff">
+      <div class="card">
+        <div class="card__head">
+          <div>
+            <span class="hand">today · friday</span>
+            <h2>shift schedule</h2>
+          </div>
+          <div class="card__head-tools">
+            <button class="chip">+ add shift</button>
+          </div>
+        </div>
+        <div class="shift-list" data-shift-list></div>
+      </div>
+
+      <div class="card">
+        <span class="hand" style="color:var(--brick);font-size:1.1rem">a note for the team</span>
+        <p style="margin-top:.6rem;color:var(--olive-deep);line-height:1.6">
+          Slow bar Saturday is on for the 17th — Nick will be on the v60 from 9–12.
+          Theo's pulled donut counts up 20% to handle the post-mother's day rush.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== SETTINGS TAB ===== -->
+    <section class="admin__tab" data-tab="settings">
+      <div class="settings-grid">
+        <div class="card">
+          <div class="card__head">
+            <div>
+              <span class="hand">where you are</span>
+              <h2>location</h2>
+            </div>
+          </div>
+          <div class="field">
+            <label>address</label>
+            <input type="text" data-setting="address">
+          </div>
+          <div class="field">
+            <label>instagram handle</label>
+            <input type="text" data-setting="instagram">
+          </div>
+          <div class="field">
+            <label>est. pickup time (minutes)</label>
+            <input type="number" data-setting="pickupMin" min="1" max="60">
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__head">
+            <div>
+              <span class="hand">when you're open</span>
+              <h2>hours</h2>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:.6rem">
+            <div class="field"><label>monday</label>    <input type="text" data-setting="hours-mon"></div>
+            <div class="field"><label>tuesday</label>   <input type="text" data-setting="hours-tue"></div>
+            <div class="field"><label>wednesday</label> <input type="text" data-setting="hours-wed"></div>
+            <div class="field"><label>thursday</label>  <input type="text" data-setting="hours-thu"></div>
+            <div class="field"><label>friday</label>    <input type="text" data-setting="hours-fri"></div>
+            <div class="field"><label>saturday</label>  <input type="text" data-setting="hours-sat"></div>
+            <div class="field"><label>sunday</label>    <input type="text" data-setting="hours-sun"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="hand" style="color:var(--brick);font-size:1.1rem">demo notes</span>
+        <p style="margin-top:.5rem;color:var(--olive-deep);line-height:1.6">
+          This is a working demo — every change persists in your browser's localStorage.
+          Hit "reset demo data" in the sidebar to start fresh. In production, this would
+          sync to a Supabase backend with proper auth and a real order webhook from the
+          customer site.
+        </p>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="assets/js/admin.js"></script>
+</body>
+</html>
